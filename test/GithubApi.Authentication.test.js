@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import { expect } from 'chai';
-import axios from 'axios';
+import get from 'axios';
 
 const urlBase = 'https://api.github.com';
 const githubUserName = 'rubendma';
@@ -9,7 +9,7 @@ const repository = 'workshop-api-testing-js';
 describe('Github Api Test', () => {
   describe('Authentication', () => {
     it('Via OAuth2 Tokens by Header', async () => {
-      const response = await axios.get(`${urlBase}/repos/${githubUserName}/${repository}`, {
+      const response = await get(`${urlBase}/repos/${githubUserName}/${repository}`, {
         headers: {
           Authorization: `token ${process.env.ACCESS_TOKEN}`
         }
@@ -20,7 +20,7 @@ describe('Github Api Test', () => {
     });
 
     it('Via OAuth2 Tokens by parameter', async () => {
-      const response = await axios.get(
+      const response = await get(
         `${urlBase}/repos/${githubUserName}/${repository}`,
         { access_token: process.env.ACCESS_TOKEN }
       );
