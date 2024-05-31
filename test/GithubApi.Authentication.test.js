@@ -11,7 +11,7 @@ describe('Github Api Test', () => {
     it('Via OAuth2 Tokens by Header', async () => {
       const response = await get(`${urlBase}/repos/${githubUserName}/${repository}`, {
         headers: {
-          Authorization: `token ${process.env.ACCESS_TOKEN}`
+          Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
         }
       });
 
