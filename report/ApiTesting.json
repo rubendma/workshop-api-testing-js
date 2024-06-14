@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 9,
-    "tests": 15,
-    "passes": 15,
+    "suites": 11,
+    "tests": 18,
+    "passes": 18,
     "pending": 0,
     "failures": 0,
-    "start": "2024-06-13T20:04:32.861Z",
-    "end": "2024-06-13T20:04:39.351Z",
-    "duration": 6490,
-    "testsRegistered": 15,
+    "start": "2024-06-14T17:39:57.251Z",
+    "end": "2024-06-14T17:40:04.493Z",
+    "duration": 7242,
+    "testsRegistered": 18,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5318bf3b-51ff-4890-8e45-5a88a4fdf2f6",
+      "uuid": "7f9da947-c4d2-463e-afc4-e83d22c76ae9",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7290c23f-3ab0-4368-908a-919aacf699f3",
+          "uuid": "c16bd4e4-2118-4ef8-8c5c-1c145cf78254",
           "title": "Github Api Test",
           "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Authentication.test.js",
           "file": "\\test\\GithubApi.Authentication.test.js",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "dd97a1ea-21bc-4eb4-84b0-04742187f84b",
+              "uuid": "533355b4-d0c5-4fc1-ad8b-ec146b3d6f4a",
               "title": "Authentication",
               "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Authentication.test.js",
               "file": "\\test\\GithubApi.Authentication.test.js",
@@ -47,7 +47,7 @@
                   "title": "Via OAuth2 Tokens by Header",
                   "fullTitle": "Github Api Test Authentication Via OAuth2 Tokens by Header",
                   "timedOut": false,
-                  "duration": 375,
+                  "duration": 524,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "const response = await get(`${urlBase}/repos/${githubUserName}/${repository}`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data.description).equal('This is a Workshop about Api Testing in JavaScript');",
                   "err": {},
-                  "uuid": "22bb8d64-25e7-48d0-9b94-ee381102b823",
-                  "parentUUID": "dd97a1ea-21bc-4eb4-84b0-04742187f84b",
+                  "uuid": "d2a59674-bb27-4d35-8a56-129fde7e435e",
+                  "parentUUID": "533355b4-d0c5-4fc1-ad8b-ec146b3d6f4a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,7 +65,7 @@
                   "title": "Via OAuth2 Tokens by parameter",
                   "fullTitle": "Github Api Test Authentication Via OAuth2 Tokens by parameter",
                   "timedOut": false,
-                  "duration": 177,
+                  "duration": 139,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -74,21 +74,21 @@
                   "context": null,
                   "code": "const response = await get(\n  `${urlBase}/repos/${githubUserName}/${repository}`,\n  { access_token: process.env.ACCESS_TOKEN }\n);\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data.description).equal('This is a Workshop about Api Testing in JavaScript');",
                   "err": {},
-                  "uuid": "7bda1704-d9b7-4aba-b790-27a059eb3389",
-                  "parentUUID": "dd97a1ea-21bc-4eb4-84b0-04742187f84b",
+                  "uuid": "aca5f35e-ae7c-4789-8f9f-e669018a0b1e",
+                  "parentUUID": "533355b4-d0c5-4fc1-ad8b-ec146b3d6f4a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "22bb8d64-25e7-48d0-9b94-ee381102b823",
-                "7bda1704-d9b7-4aba-b790-27a059eb3389"
+                "d2a59674-bb27-4d35-8a56-129fde7e435e",
+                "aca5f35e-ae7c-4789-8f9f-e669018a0b1e"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 552,
+              "duration": 663,
               "root": false,
               "rootEmpty": false,
               "_timeout": 5000
@@ -104,7 +104,122 @@
           "_timeout": 5000
         },
         {
-          "uuid": "aafbee72-5798-4e91-a63b-450db2e99d2e",
+          "uuid": "481cf9c1-d544-4aff-b8f9-649872c816c1",
+          "title": "Post and Patch requests",
+          "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Issue.test.js",
+          "file": "\\test\\GithubApi.Issue.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8a628d7c-1c3c-4a84-8ec6-981c610d6252",
+              "title": "Review creation of issue by post",
+              "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Issue.test.js",
+              "file": "\\test\\GithubApi.Issue.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before all\" hook in \"Review creation of issue by post\"",
+                  "fullTitle": "Post and Patch requests Review creation of issue by post \"before all\" hook in \"Review creation of issue by post\"",
+                  "timedOut": false,
+                  "duration": 143,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const response = await axios.get(`${urlBase}/user`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\ndataUser = response.data;\nurlIssue = `${urlBase}/repos/${dataUser.login}/${repositoryName}/issues`;",
+                  "err": {},
+                  "uuid": "7b5e399f-d04b-4de5-a242-88f173550f06",
+                  "parentUUID": "8a628d7c-1c3c-4a84-8ec6-981c610d6252",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Verify exist at least one public repository",
+                  "fullTitle": "Post and Patch requests Review creation of issue by post Verify exist at least one public repository",
+                  "timedOut": false,
+                  "duration": 251,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const repositories = await axios.get(dataUser.repos_url, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nconst dataRepositories = repositories.data;\nconst repository = dataRepositories.find((repo) => repo.private === false);\nexpect(repository.name).to.not.equal(undefined);",
+                  "err": {},
+                  "uuid": "19619b62-1e67-41b6-8747-b1dfa99bbc7e",
+                  "parentUUID": "8a628d7c-1c3c-4a84-8ec6-981c610d6252",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Verify issue creation",
+                  "fullTitle": "Post and Patch requests Review creation of issue by post Verify issue creation",
+                  "timedOut": false,
+                  "duration": 326,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const timeStamp = Date.now();\nconst issueData = { title: `Issue created from api ${timeStamp}` };\nconst createIssue = await axios.post(urlIssue, issueData, {\n  headers: {\n    'Content-Type': 'application/json',\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nissueNumber = createIssue.data.number;\nissueTitle = issueData.title;\nexpect(createIssue.status).to.equal(201);\nexpect(createIssue.statusText).to.equal('Created');\nexpect(issueNumber).to.not.equal(undefined);\nexpect(createIssue.data.title).to.equal(issueTitle);\nexpect(createIssue.data.body).to.equal(null);",
+                  "err": {},
+                  "uuid": "98048265-ac12-4b47-9e00-cca9d066b1b9",
+                  "parentUUID": "8a628d7c-1c3c-4a84-8ec6-981c610d6252",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Verify issue update",
+                  "fullTitle": "Post and Patch requests Review creation of issue by post Verify issue update",
+                  "timedOut": false,
+                  "duration": 501,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const dataIssueUpdate = { body: 'Body added to review issue' };\nconst updateIssue = await axios.patch(`${urlIssue}/${issueNumber}`, dataIssueUpdate, {\n  headers: {\n    'Content-Type': 'application/json',\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nexpect(updateIssue.status).to.equal(200);\nexpect(updateIssue.statusText).to.equal('OK');\nexpect(updateIssue.data.number).to.equal(issueNumber);\nexpect(updateIssue.data.title).to.equal(issueTitle);\nexpect(updateIssue.data.body).to.equal(dataIssueUpdate.body);",
+                  "err": {},
+                  "uuid": "ccca2f8b-771e-4247-87d8-38f409c95e4d",
+                  "parentUUID": "8a628d7c-1c3c-4a84-8ec6-981c610d6252",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "19619b62-1e67-41b6-8747-b1dfa99bbc7e",
+                "98048265-ac12-4b47-9e00-cca9d066b1b9",
+                "ccca2f8b-771e-4247-87d8-38f409c95e4d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1078,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "fbc07dcf-6d93-49df-b638-aef1e26cf5dc",
           "title": "Put requests",
           "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Put.test.js",
           "file": "\\test\\GithubApi.Put.test.js",
@@ -113,7 +228,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "3e3d5583-45db-4d09-99dc-a2400915c329",
+              "uuid": "c2e41b17-bd5f-4066-9851-52f38cb9961c",
               "title": "Review follow an user",
               "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Put.test.js",
               "file": "\\test\\GithubApi.Put.test.js",
@@ -122,7 +237,7 @@
                   "title": "\"before all\" hook in \"Review follow an user\"",
                   "fullTitle": "Put requests Review follow an user \"before all\" hook in \"Review follow an user\"",
                   "timedOut": false,
-                  "duration": 164,
+                  "duration": 155,
                   "state": null,
                   "speed": null,
                   "pass": false,
@@ -131,8 +246,8 @@
                   "context": null,
                   "code": "const response = await axios.put(`${urlBase}/user/following/${githubUserName}`, null, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\ndataUser = response;",
                   "err": {},
-                  "uuid": "e5a66c8f-9c0d-48b9-b9c1-cab54bde153d",
-                  "parentUUID": "3e3d5583-45db-4d09-99dc-a2400915c329",
+                  "uuid": "45730107-4910-4b86-9263-54b3cccc07f6",
+                  "parentUUID": "c2e41b17-bd5f-4066-9851-52f38cb9961c",
                   "isHook": true,
                   "skipped": false
                 }
@@ -152,15 +267,15 @@
                   "context": null,
                   "code": "expect(dataUser.status).to.equal(204);\nexpect(dataUser.statusText).to.equal('No Content');",
                   "err": {},
-                  "uuid": "60d7e6fa-c448-4d39-9774-c294907f9e15",
-                  "parentUUID": "3e3d5583-45db-4d09-99dc-a2400915c329",
+                  "uuid": "63a2f8d5-debb-405f-a553-31fefd397794",
+                  "parentUUID": "c2e41b17-bd5f-4066-9851-52f38cb9961c",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "60d7e6fa-c448-4d39-9774-c294907f9e15"
+                "63a2f8d5-debb-405f-a553-31fefd397794"
               ],
               "failures": [],
               "pending": [],
@@ -171,7 +286,7 @@
               "_timeout": 5000
             },
             {
-              "uuid": "138c6bbb-6a3e-4ac9-a6ab-2b59582f5427",
+              "uuid": "ff72490a-5f27-455c-b9f2-140ba73cc7da",
               "title": "Review user follows an other user",
               "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Put.test.js",
               "file": "\\test\\GithubApi.Put.test.js",
@@ -180,7 +295,7 @@
                   "title": "\"before all\" hook in \"Review user follows an other user\"",
                   "fullTitle": "Put requests Review user follows an other user \"before all\" hook in \"Review user follows an other user\"",
                   "timedOut": false,
-                  "duration": 131,
+                  "duration": 149,
                   "state": null,
                   "speed": null,
                   "pass": false,
@@ -189,8 +304,8 @@
                   "context": null,
                   "code": "const response = await axios.get(`${urlBase}/user/following`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\ndataUser = response.data;",
                   "err": {},
-                  "uuid": "a3a9c91d-fccc-4ecf-bdf5-31f4b5df93e5",
-                  "parentUUID": "138c6bbb-6a3e-4ac9-a6ab-2b59582f5427",
+                  "uuid": "2ac18c41-5c9c-4124-93e8-308e8e15bf49",
+                  "parentUUID": "ff72490a-5f27-455c-b9f2-140ba73cc7da",
                   "isHook": true,
                   "skipped": false
                 }
@@ -201,7 +316,7 @@
                   "title": "Verify users that follow the account",
                   "fullTitle": "Put requests Review user follows an other user Verify users that follow the account",
                   "timedOut": false,
-                  "duration": 0,
+                  "duration": 1,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -210,20 +325,20 @@
                   "context": null,
                   "code": "const userFollowed = dataUser.find((users) => users.login === githubUserName);\nexpect(userFollowed.login).to.equal('aperdomob');",
                   "err": {},
-                  "uuid": "1a998b7b-b316-4458-9a36-fddb466bd49a",
-                  "parentUUID": "138c6bbb-6a3e-4ac9-a6ab-2b59582f5427",
+                  "uuid": "4b376d28-e778-4664-a406-475b5ce647dc",
+                  "parentUUID": "ff72490a-5f27-455c-b9f2-140ba73cc7da",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "1a998b7b-b316-4458-9a36-fddb466bd49a"
+                "4b376d28-e778-4664-a406-475b5ce647dc"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 0,
+              "duration": 1,
               "root": false,
               "rootEmpty": false,
               "_timeout": 5000
@@ -239,7 +354,7 @@
           "_timeout": 5000
         },
         {
-          "uuid": "b1760214-c16d-4cd8-b0e9-d45ca9b87377",
+          "uuid": "20225389-8b32-4092-8c80-3751071cf598",
           "title": "Github Api Test",
           "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Repositories.test.js",
           "file": "\\test\\GithubApi.Repositories.test.js",
@@ -248,7 +363,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "74115fa0-a314-4242-ac48-ac76e1bdce99",
+              "uuid": "4014a88f-42b6-41f8-949b-25b7ef7b3bea",
               "title": "Get data from git hub",
               "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Repositories.test.js",
               "file": "\\test\\GithubApi.Repositories.test.js",
@@ -257,7 +372,7 @@
                   "title": "\"before all\" hook in \"Get data from git hub\"",
                   "fullTitle": "Github Api Test Get data from git hub \"before all\" hook in \"Get data from git hub\"",
                   "timedOut": false,
-                  "duration": 133,
+                  "duration": 128,
                   "state": null,
                   "speed": null,
                   "pass": false,
@@ -266,8 +381,8 @@
                   "context": null,
                   "code": "const response = await get(`${urlBase}/users/${githubUserName}`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\ndataUser = response.data;",
                   "err": {},
-                  "uuid": "537ee37a-3d92-4de5-b8d7-8ba459aec594",
-                  "parentUUID": "74115fa0-a314-4242-ac48-ac76e1bdce99",
+                  "uuid": "a82c1dc5-4f53-4589-937f-e189ffc6a2b5",
+                  "parentUUID": "4014a88f-42b6-41f8-949b-25b7ef7b3bea",
                   "isHook": true,
                   "skipped": false
                 }
@@ -287,8 +402,8 @@
                   "context": null,
                   "code": "expect(dataUser.name).equal(nameOfUser);\nexpect(dataUser.company).equal(company);\nexpect(dataUser.location).equal(location);",
                   "err": {},
-                  "uuid": "394fd513-7790-48b2-956c-42a60c664f43",
-                  "parentUUID": "74115fa0-a314-4242-ac48-ac76e1bdce99",
+                  "uuid": "40ecd33a-4e72-4939-8a66-53a8773e975d",
+                  "parentUUID": "4014a88f-42b6-41f8-949b-25b7ef7b3bea",
                   "isHook": false,
                   "skipped": false
                 },
@@ -296,7 +411,7 @@
                   "title": "Verify specific repo of the user",
                   "fullTitle": "Github Api Test Get data from git hub Verify specific repo of the user",
                   "timedOut": false,
-                  "duration": 537,
+                  "duration": 1004,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -305,8 +420,8 @@
                   "context": null,
                   "code": "const response = await get(dataUser.repos_url, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nconst repositories = response.data;\nconst repository = repositories.find((repo) => repo.name === repoToVerify);\nassert.exists(repository);\nexpect(repository.full_name).to.equal('aperdomob/jasmine-json-report');\nexpect(repository.private).to.equal(false);\nexpect(repository.description).to.equal('A Simple Jasmine JSON Report');",
                   "err": {},
-                  "uuid": "f10c6797-c6a1-4f5e-8502-b3b6b77f32fc",
-                  "parentUUID": "74115fa0-a314-4242-ac48-ac76e1bdce99",
+                  "uuid": "52d9c740-3826-4214-80ec-f96c00cab829",
+                  "parentUUID": "4014a88f-42b6-41f8-949b-25b7ef7b3bea",
                   "isHook": false,
                   "skipped": false
                 },
@@ -314,7 +429,7 @@
                   "title": "Verify repo is downloaded in zip format",
                   "fullTitle": "Github Api Test Get data from git hub Verify repo is downloaded in zip format",
                   "timedOut": false,
-                  "duration": 1435,
+                  "duration": 1455,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -323,28 +438,28 @@
                   "context": null,
                   "code": "const noExpectedMd5 = '62b254a4ef680d62d6de3489e462ad43';\nconst response = await get(dataUser.repos_url, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nconst repositories = response.data;\nconst repository = repositories.find((repo) => repo.name === repoToVerify);\nconst responseFile = await get(`${repository.svn_url}/archive/refs/heads/${repository.default_branch}.zip`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nassert.exists(responseFile);\nexpect(md5(responseFile.data)).to.equal(noExpectedMd5);",
                   "err": {},
-                  "uuid": "98df7b74-94c2-41fa-8dc5-99932302f85b",
-                  "parentUUID": "74115fa0-a314-4242-ac48-ac76e1bdce99",
+                  "uuid": "0010b896-264e-4eb1-8500-78715babca90",
+                  "parentUUID": "4014a88f-42b6-41f8-949b-25b7ef7b3bea",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "394fd513-7790-48b2-956c-42a60c664f43",
-                "f10c6797-c6a1-4f5e-8502-b3b6b77f32fc",
-                "98df7b74-94c2-41fa-8dc5-99932302f85b"
+                "40ecd33a-4e72-4939-8a66-53a8773e975d",
+                "52d9c740-3826-4214-80ec-f96c00cab829",
+                "0010b896-264e-4eb1-8500-78715babca90"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1973,
+              "duration": 2460,
               "root": false,
               "rootEmpty": false,
               "_timeout": 5000
             },
             {
-              "uuid": "373c7388-d20b-410b-97d8-a54753e89dff",
+              "uuid": "615edd7c-b1a5-482e-8f99-94e8d7659c5e",
               "title": "Get README file to verify",
               "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\GithubApi.Repositories.test.js",
               "file": "\\test\\GithubApi.Repositories.test.js",
@@ -353,7 +468,7 @@
                   "title": "\"before all\" hook in \"Get README file to verify\"",
                   "fullTitle": "Github Api Test Get README file to verify \"before all\" hook in \"Get README file to verify\"",
                   "timedOut": false,
-                  "duration": 802,
+                  "duration": 790,
                   "state": null,
                   "speed": null,
                   "pass": false,
@@ -362,8 +477,8 @@
                   "context": null,
                   "code": "const response = await get(`${urlBase}/users/${githubUserName}`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nconst responseRepos = await get(response.data.repos_url, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nconst repositories = responseRepos.data;\nconst repositoryData = repositories.find((repo) => repo.name === repoToVerify);\nconst responseFile = await get(`${repositoryData.url}/contents`, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nresponseFileData = responseFile.data;",
                   "err": {},
-                  "uuid": "7ec7182b-83a8-497a-99ee-bf29a2b1c132",
-                  "parentUUID": "373c7388-d20b-410b-97d8-a54753e89dff",
+                  "uuid": "ba2078fd-766d-4a28-91da-b5c1041944ed",
+                  "parentUUID": "615edd7c-b1a5-482e-8f99-94e8d7659c5e",
                   "isHook": true,
                   "skipped": false
                 }
@@ -383,8 +498,8 @@
                   "context": null,
                   "code": "const readmeData = responseFileData.find((files) => files.name === readmeName);\nexpect(readmeData.name).to.equal(readmeName);\nexpect(readmeData.path).to.equal(readmePath);\nexpect(readmeData.sha).to.equal(readmeSha);",
                   "err": {},
-                  "uuid": "e49b702b-1e05-4a56-99e3-e04caa55bd67",
-                  "parentUUID": "373c7388-d20b-410b-97d8-a54753e89dff",
+                  "uuid": "cd686352-ba5b-459e-bbae-8a164c06d0fd",
+                  "parentUUID": "615edd7c-b1a5-482e-8f99-94e8d7659c5e",
                   "isHook": false,
                   "skipped": false
                 },
@@ -392,7 +507,7 @@
                   "title": "Download README.md file",
                   "fullTitle": "Github Api Test Get README file to verify Download README.md file",
                   "timedOut": false,
-                  "duration": 447,
+                  "duration": 343,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -401,21 +516,21 @@
                   "context": null,
                   "code": "const readmeMD5 = '497eb689648cbbda472b16baaee45731';\nconst repositoryData = responseFileData.find((repo) => repo.name === readmeName);\nconst responseReadme = await get(repositoryData.download_url, {\n  headers: {\n    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`\n  }\n});\nassert.exists(responseReadme);\nexpect(md5(responseReadme.data)).to.equal(readmeMD5);",
                   "err": {},
-                  "uuid": "99a03a42-72f0-4737-b215-8f59c2aed2ba",
-                  "parentUUID": "373c7388-d20b-410b-97d8-a54753e89dff",
+                  "uuid": "783e1167-aa70-4633-bd70-d07c4a03b90b",
+                  "parentUUID": "615edd7c-b1a5-482e-8f99-94e8d7659c5e",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "e49b702b-1e05-4a56-99e3-e04caa55bd67",
-                "99a03a42-72f0-4737-b215-8f59c2aed2ba"
+                "cd686352-ba5b-459e-bbae-8a164c06d0fd",
+                "783e1167-aa70-4633-bd70-d07c4a03b90b"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 447,
+              "duration": 343,
               "root": false,
               "rootEmpty": false,
               "_timeout": 5000
@@ -431,7 +546,7 @@
           "_timeout": 5000
         },
         {
-          "uuid": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
+          "uuid": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
           "title": "First Api Tests",
           "fullFile": "C:\\TRAININGS\\WORKSHOP AXIOS\\workshop-api-testing-js\\test\\MyFirstApiConsume.test.js",
           "file": "\\test\\MyFirstApiConsume.test.js",
@@ -442,7 +557,7 @@
               "title": "Consume GET Service",
               "fullTitle": "First Api Tests Consume GET Service",
               "timedOut": false,
-              "duration": 327,
+              "duration": 423,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -451,8 +566,8 @@
               "context": null,
               "code": "const response = await axios.get('https://httpbin.org/ip');\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data).to.have.property('origin');",
               "err": {},
-              "uuid": "64b5431c-f124-4a61-8198-dd4e4c779964",
-              "parentUUID": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
+              "uuid": "09e8a908-3883-4829-ae07-6e5642769c56",
+              "parentUUID": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
               "isHook": false,
               "skipped": false
             },
@@ -460,7 +575,7 @@
               "title": "Consume GET Service with query parameters",
               "fullTitle": "First Api Tests Consume GET Service with query parameters",
               "timedOut": false,
-              "duration": 1561,
+              "duration": 294,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -469,8 +584,8 @@
               "context": null,
               "code": "const query = {\n  name: 'John',\n  age: '31',\n  city: 'New York'\n};\nconst response = await axios.get('https://httpbin.org/get', { query });\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.config.query).to.eql(query);",
               "err": {},
-              "uuid": "f69e2c8d-5658-4684-8ca8-68b3aa714f20",
-              "parentUUID": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
+              "uuid": "0407408c-df56-4810-a828-2c7481cd2c08",
+              "parentUUID": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
               "isHook": false,
               "skipped": false
             },
@@ -478,7 +593,7 @@
               "title": "Consume PATCH Service",
               "fullTitle": "First Api Tests Consume PATCH Service",
               "timedOut": false,
-              "duration": 83,
+              "duration": 87,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -487,32 +602,14 @@
               "context": null,
               "code": "const response = await axios.patch('https://httpbin.org/patch');\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data).to.have.property('origin');",
               "err": {},
-              "uuid": "1fb5708f-0df8-42ab-8b0e-a6a19ee4d7ed",
-              "parentUUID": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
+              "uuid": "cf773d92-b70c-45b7-9120-52ad0db11def",
+              "parentUUID": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
               "isHook": false,
               "skipped": false
             },
             {
               "title": "Consume PUT Service",
               "fullTitle": "First Api Tests Consume PUT Service",
-              "timedOut": false,
-              "duration": 133,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await axios.put('https://httpbin.org/put');\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data).to.have.property('origin');",
-              "err": {},
-              "uuid": "7ac45da2-3426-43f1-b73c-e22ec6c0031a",
-              "parentUUID": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Consume DELETE Service",
-              "fullTitle": "First Api Tests Consume DELETE Service",
               "timedOut": false,
               "duration": 80,
               "state": "passed",
@@ -521,10 +618,28 @@
               "fail": false,
               "pending": false,
               "context": null,
+              "code": "const response = await axios.put('https://httpbin.org/put');\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data).to.have.property('origin');",
+              "err": {},
+              "uuid": "2c03fa80-c325-4cd0-b2db-ba66c33b3bf2",
+              "parentUUID": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consume DELETE Service",
+              "fullTitle": "First Api Tests Consume DELETE Service",
+              "timedOut": false,
+              "duration": 332,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
               "code": "const response = await axios.delete('https://httpbin.org/delete');\nexpect(response.status).to.equal(StatusCodes.OK);\nexpect(response.data).to.have.property('origin');",
               "err": {},
-              "uuid": "5ba2df65-d0b4-4295-86c5-e86701e14403",
-              "parentUUID": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
+              "uuid": "ed37c09e-ecf8-4530-8c82-503e7b8649d3",
+              "parentUUID": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
               "isHook": false,
               "skipped": false
             },
@@ -532,7 +647,7 @@
               "title": "Consume HEAD Service",
               "fullTitle": "First Api Tests Consume HEAD Service",
               "timedOut": false,
-              "duration": 81,
+              "duration": 80,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -541,25 +656,25 @@
               "context": null,
               "code": "const response = await axios.head('https://httpbin.org/');\nexpect(response.status).to.equal(StatusCodes.OK);",
               "err": {},
-              "uuid": "7ab8e86f-ae2a-4591-98fd-e8b65a722455",
-              "parentUUID": "1fc0e7ff-a9b2-454f-ab85-427520fc3c32",
+              "uuid": "309a3fb3-e8f8-4726-b725-26787964d1c5",
+              "parentUUID": "2c2a7d00-7b1d-48ea-87f8-0cb0334ad403",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "64b5431c-f124-4a61-8198-dd4e4c779964",
-            "f69e2c8d-5658-4684-8ca8-68b3aa714f20",
-            "1fb5708f-0df8-42ab-8b0e-a6a19ee4d7ed",
-            "7ac45da2-3426-43f1-b73c-e22ec6c0031a",
-            "5ba2df65-d0b4-4295-86c5-e86701e14403",
-            "7ab8e86f-ae2a-4591-98fd-e8b65a722455"
+            "09e8a908-3883-4829-ae07-6e5642769c56",
+            "0407408c-df56-4810-a828-2c7481cd2c08",
+            "cf773d92-b70c-45b7-9120-52ad0db11def",
+            "2c03fa80-c325-4cd0-b2db-ba66c33b3bf2",
+            "ed37c09e-ecf8-4530-8c82-503e7b8649d3",
+            "309a3fb3-e8f8-4726-b725-26787964d1c5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2265,
+          "duration": 1296,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
